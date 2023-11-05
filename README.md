@@ -2,7 +2,7 @@
 
 Convert GIF images to ASCII art text using a color palette.
 
-## Prerequisite
+## Setup
 
 use the following commands to set it up:
 
