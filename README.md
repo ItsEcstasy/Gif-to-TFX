@@ -9,6 +9,3 @@ Make sure to install the `github.com/nfnt/resize` library (used for image resizi
     go init Gif
     go mod tidy
     go get
-
-```bash
-go get -u github.com/nfnt/resize
