@@ -4,7 +4,7 @@ Convert GIF images to ASCII art text using a color palette.
 
 ## Prerequisite
 
-Make sure to install the `github.com/nfnt/resize` library (used for image resizing) as a dependency. use the following commands:
+use the following commands to set it up:
 
     go init Gif
     go mod tidy
