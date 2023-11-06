@@ -1,4 +1,4 @@
-# Gif-to-Text
+# Gif-to-TFX
 
 Convert GIF images to ASCII art text using a color palette.
 
