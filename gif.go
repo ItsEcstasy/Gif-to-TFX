@@ -12,20 +12,19 @@ import (
 	"github.com/nfnt/resize"
 )
 
-// [+] ===================================================================== [+]
-var ClearTFX = false // toggle clear replacer if you require one
-var SleepTFX = true  // toggle sleep replacer if you require one
-
-var clearReplacer = "<<clear>>" // replace with the clear replacer you use
-var sleepReplacer = "<<85>>"    // replace with the sleep replacer you use
-
-var showProgress = false // toggle the display the progress bar
-var showPreview = false  // toggle the preview, note: this will take longer btw
-// [+] ===================================================================== [+]
+var (
+	ClearTFX      = true
+	SleepTFX      = true
+	clearReplacer = "<<clear>>"
+	sleepReplacer = "<<85>>"
+	showProgress  = false
+	showPreview   = false
+)
 
 func main() {
 	var gifName string
-	fmt.Print("Enter GIF File Name Example: Eye.gif\nName: ")
+
+	fmt.Print("File: ")
 	_, err := fmt.Scan(&gifName)
 	if err != nil {
 		log.Fatal(err)
@@ -48,8 +47,8 @@ func main() {
 	}
 
 	roundProgress := 0
-
-	outputName := fmt.Sprintf("%s-output.txt", gifName)
+	cutName := strings.TrimSuffix(gifName, ".gif")
+	outputName := fmt.Sprintf("%s.txt", cutName)
 	outputFile, err := os.Create(outputName)
 	if err != nil {
 		log.Fatal(err)
@@ -64,20 +63,21 @@ func main() {
 		gifOutput := imageToText(resized)
 		showOutput := true
 		if showOutput {
-			fmt.Print("\033[H\033[2J")
+			fmt.Print("\f")
 			fmt.Print("Converting...\n")
 			if showPreview {
 				fmt.Print(gifOutput)
 			}
 		}
 
-		text := gifOutput + "\r\n"
+		text := gifOutput
+
+		if SleepTFX {
+			text += sleepReplacer + "\n"
+		}
 
 		if ClearTFX {
-			text += clearReplacer + "\r\n"
-		}
-		if SleepTFX {
-			text += sleepReplacer + "\r\n"
+			text += clearReplacer + " \n"
 		}
 
 		if text == sleepReplacer {
@@ -107,14 +107,14 @@ func main() {
 
 func imageToText(imageKek image.Image) string {
 	palette := map[float64]string{
-		64:  "█", // very bright areas
-		128: "▓", // bright areas
-		192: "▒", // dark areas
-		256: "░", // very dark areas
+		64:  "█", // very bright
+		128: "▓", // bright
+		192: "▒", // dark
+		256: "░", // very dark
 	}
 
 	text := ""
-	text += "\033[0m" // Reset text color
+	text += "\033[0m"
 
 	for y := 0; y < imageKek.Bounds().Dy(); y++ {
 		for x := 0; x < imageKek.Bounds().Dx(); x++ {
