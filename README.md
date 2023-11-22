@@ -1,14 +1,11 @@
 # Gif-to-TFX
 
-Convert GIF images to ASCII art text using a color palette.
+Convert GIF images to ANSI art text for terminals.
 
-## Setup
+## Usage
+Download the [Gif-to-TFX](https://github.com/ItsEcstasy/Gif-to-TFX/releases/download/V1/gif.exe) tool to convert GIFs.
 
-use the following commands to set it up:
-
-    go mod init Gif
-    go mod tidy
-    go get
+Download the [Preview](https://github.com/ItsEcstasy/Gif-to-TFX/raw/main/preview.exe) tool to preview them.
 
 # Examples
 
