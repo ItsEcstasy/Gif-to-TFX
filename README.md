@@ -10,7 +10,7 @@ Download the [Preview](https://github.com/ItsEcstasy/Gif-to-TFX/raw/main/preview
 # Examples
 
 ## Original GIF
-![Original Gif](https://media.discordapp.net/attachments/1121632923276292159/1169115493559447572/IMG_1409.gif?ex=65543aa6&is=6541c5a6&hm=ff087efd4e698582cc685cd32574d2ea03a5aacece5a11adbd3d10ee7e97d7d7)
+![Original Gif]([https://media.discordapp.net/attachments/1121632923276292159/1169115493559447572/IMG_1409.gif?ex=65543aa6&is=6541c5a6&hm=ff087efd4e698582cc685cd32574d2ea03a5aacece5a11adbd3d10ee7e97d7d7](https://i.pinimg.com/originals/31/3a/3d/313a3d66136830b8cabb45bc15902124.gif))
 
 ## Converted GIF
 ![Converted](https://i.imgur.com/FRId6NX.gif)
