@@ -10,7 +10,7 @@ Download the [Preview](https://github.com/ItsEcstasy/Gif-to-TFX/raw/main/preview
 # Examples
 
 ## Original GIF
-![Original Gif]([https://i.pinimg.com/originals/31/3a/3d/313a3d66136830b8cabb45bc15902124.gif))
+![Original Gif](https://i.imgur.com/gCI0CVQ.gif)
 
 ## Converted GIF
 ![Converted](https://i.imgur.com/FRId6NX.gif)
